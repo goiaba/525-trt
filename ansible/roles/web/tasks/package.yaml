@@ -1,0 +1,6 @@
+
+- name: instalando pacotes comuns
+  package:
+    name:
+      - php
+  

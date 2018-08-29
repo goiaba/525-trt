@@ -1,0 +1,11 @@
+---
+
+ - name: Instala repositorio puppet
+   include: repositorio.yaml
+
+ - name: Instala puppet server
+   include: server.yaml
+
+ - name: Instala puppet client
+   include: client.yaml
+

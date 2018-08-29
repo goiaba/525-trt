@@ -1,0 +1,23 @@
+- name: Utilizando condicao
+  hosts: all
+  vars:
+    - databasehost: postgres.dexter.com.br
+    - databasename: frodo
+    - databasepasswd: 4linux
+  tasks:
+    - name: Instalando apache no Debian
+      package:
+        name: apache2
+        state: present
+      when: ansible_os_family == 'Debian'
+
+    - name: Instalando apache no Redhat
+      package:
+        name: httpd
+        state: present
+      when: ansible_os_family == 'Redhat'
+
+    - name: Copiando uma arquivo template
+      template:
+        src: wp-config
+        dest: /var/www/html/

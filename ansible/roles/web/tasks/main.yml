@@ -1,0 +1,11 @@
+---
+
+ - name: Instala pacotes comuns
+   include: package.yaml
+
+ - name: Instala pacotes por distribuicao
+   include: package_{{ ansible_os_family }}.yaml
+
+ - name: Configura apache (index.html)
+   include: apache_config.yaml
+

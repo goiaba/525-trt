@@ -1,0 +1,18 @@
+---
+# handlers file for web
+- name: restart apache Debian
+  service:
+    name: apache2
+    state: restarted
+
+- name: restart apache RedHat
+  service:
+    name: httpd
+    state: restarted
+  notify:
+    - parar o firewalld
+
+- name: parar o firewalld
+  service:
+    name: firewalld
+    state: stopped

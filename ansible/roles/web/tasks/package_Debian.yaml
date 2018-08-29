@@ -1,0 +1,10 @@
+
+- name: instalando o apache
+  package:
+    name:
+      - apache2
+      - mariadb-server
+    state: present
+    update_cache: yes
+  when: ansible_os_family == 'Debian'
+

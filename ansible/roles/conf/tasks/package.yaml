@@ -1,0 +1,19 @@
+
+- name: Instalando pacotes
+  package:
+    name:
+      - figlet
+      - cowsay
+      - vim
+      - htop
+      - sysstat
+    state: present
+    update_cache: yes
+
+#- name: Instalando pacote epel-release
+#  package:
+#    name: epel-release
+#    state: present
+#  when: ansible_os_family == 'RedHat'
+
+

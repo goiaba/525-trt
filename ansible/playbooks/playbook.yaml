@@ -1,0 +1,19 @@
+- name: Meu primeiro playbook
+  hosts: all
+  tasks:
+    - name: Instalando o sl
+      package:
+        name: sl
+        state: present
+  
+    - name: Adicionando um usuario
+      user:
+        name: devops
+        shell: /bin/bash
+        password: '$1$qLKC70VO$Wv/2KXfVTe760jmW9R7E/0'
+
+    - name: Copiando o arquivo de configuracao
+      copy:
+        src: devops
+        dest: /tmp/devops.backup
+

@@ -1,0 +1,7 @@
+
+- name: Instala puppet server
+  package:
+    name: puppetserver
+    state: present
+  when: ('puppetserver' in group_names)
+

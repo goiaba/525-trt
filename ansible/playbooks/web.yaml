@@ -1,0 +1,7 @@
+
+- name: Configurando servidor web
+  hosts: "{{ grupo }}"
+  vars:
+    - grupo: all
+  roles:
+    - web

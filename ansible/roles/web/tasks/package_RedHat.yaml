@@ -1,0 +1,10 @@
+
+- name: instalando o apache no centos
+  package:
+    name:
+      - httpd
+      - mariadb
+    state: present
+    update_cache: yes
+  when: ansible_os_family == 'RedHat'
+

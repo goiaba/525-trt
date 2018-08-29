@@ -1,0 +1,7 @@
+
+- name: Instala puppet client
+  package:
+    name: puppet-agent
+    state: present
+  when: ('puppetagent' in group_names)
+

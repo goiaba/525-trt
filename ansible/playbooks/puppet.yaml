@@ -1,0 +1,7 @@
+
+- name: Instala puppet nos servidores
+  hosts: "{{ grupo }}"
+  vars:
+    - grupo: all
+  roles:
+    - puppet

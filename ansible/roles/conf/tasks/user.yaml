@@ -1,0 +1,20 @@
+
+- name: Registra hash da senha dos usuarios
+  shell: "echo 4linux | openssl passwd -1 -stdin"
+  register: openssl_output
+  run_once: yes
+
+- name: Adicionando usuarios
+  user:
+    name: "{{ item.name }}"
+    state: present
+    shell: /bin/bash
+    home: "{{ item.home }}"
+    password: "{{ openssl_output.stdout }}"
+  with_items:
+    - name: devops
+      home: /srv/devops
+    - name: developer
+      home: /srv/developer
+    - name: brunocorrea
+      home: /srv/brunocorrea

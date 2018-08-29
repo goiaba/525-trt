@@ -1,0 +1,8 @@
+
+- name: criando index para o mundo
+  template:
+    src: index.html
+    dest: /var/www/html/index.html
+  notify:
+    - restart apache {{ ansible_os_family }}
+

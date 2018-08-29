@@ -1,0 +1,31 @@
+- name: Meu primeiro exercicio
+  hosts: all
+  tasks:
+    - name: Instalando pacotes
+      package:
+        name:
+          - cowsay
+          - vim
+          - htop
+        state: present
+
+    - name: Instalando pacote epel-release
+      package:
+        name: epel-release
+        state: present
+      when: ansible_os_family == 'RedHat'
+  
+    - name: Registra hash da senha dos usuarios
+      shell: "echo 4linux | openssl passwd -1 -stdin"
+      register: openssl_output
+
+    - name: Adicionando usuarios
+      user:
+        name: "{{ item }}"
+        shell: /bin/bash
+        password: "{{ openssl_output.stdout }}"
+      with_items:
+        - devops
+        - developer
+        - brunocorrea
+
