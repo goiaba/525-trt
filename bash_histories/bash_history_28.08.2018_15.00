@@ -1,0 +1,427 @@
+> .bash_history 
+lsb_release -a
+vim /etc/network/interfaces
+ip a
+vim /etc/network/interfaces
+dhclient -v emp0s8
+dhclient -v enp0s8
+ip a
+wget google.com.br
+ll
+curl google.com.br
+lsb_release -a
+sudo apt-get install software-properties-common
+sudo apt-add-repository ppa:ansible/ansible
+apt-get update 
+apt-get install ansible
+ansible
+ansible -v
+ansible --version
+pwd
+mkdir /etc/keys
+cd /etc/keys
+source /etc/profile
+ssh-keygen 
+ll
+setxkbmap
+ssh-copy-id -i devops.pem.pub root@devops
+apt-cache search puppet
+history 
+ssh-copy-id -i devops.pem.pub root@docker
+cd /etc/keys/
+ssh-copy-id -i devops.pem.pub root@docker
+ssh-copy-id -i devops.pem.pub root@automation
+ll
+ssh docker
+ssh -i devops.pem docker
+ssh -i devops.pem 
+cd /etc/ansible/
+ll
+ll roles/
+vim ansible.cfg 
+ll
+vim ansible.cfg 
+vim hosts 
+cp hosts hosts.orig
+>hosts
+ll
+vim hosts
+ansible 
+ansible -m setup devops
+ansible -m setup devops.dexter.com.br
+ansible  devops.dexter.com.br
+ansible all -m command "ls -l /opt/"
+ansible -m setup all
+ansible -m command 'ls -l' all
+ansible -m command -a 'ls -l' all
+ansible -m command -a 'ls -l /' all
+ansible -m command -a 'ls -l touch /tmp/soudevops' all
+ansible -m command -a 'touch /tmp/soudevops' all
+ansible -m command -a 'ls -l /tmp/soudevops' all
+ansible -m shell -a 'ls -l /tmp/soudevops' all
+ansible -m command -a 'ls -l /tmp/ | grep soudevops' all
+ll
+mkdir playbooks
+ll
+cd playbooks/
+vim playbook.yaml
+ansible-playbook playbook.yaml 
+sl
+man sl
+sl
+ansible-playbook playbook.yaml 
+vim playbook.yaml
+openssl passwd -1
+vim playbook.yaml
+man openssl
+man openssl password
+vim playbook.yaml
+vim devops
+ansible-playbook playbook.yaml 
+ansible -m command -a 'ls -l /tmp/ | grep devops' all
+ansible -m shell -a 'ls -l /tmp/ | grep devops' all
+ssh devops@automation.dexter.com.br
+ssh devops@docker.dexter.com.br
+vim playbook.yaml
+vim exercicio1.yaml 
+#ansible-playbook exercicio1.yaml 
+vim exercicio1.yaml 
+ansible -m setup all | less
+vim exercicio1.yaml 
+ansible-playbook exercicio1.yaml 
+vim exercicio1.yaml 
+ansible-playbook exercicio1.yaml 
+vim exercicio1.yaml 
+ansible-playbook exercicio1.yaml 
+vim exercicio1.yaml 
+ansible-playbook exercicio1.yaml 
+vim exercicio1.yaml 
+ansible-playbook exercicio1.yaml 
+vim ../ansible.cfg 
+ansible-playbook exercicio1.yaml 
+vim exercicio1.yaml 
+ansible-playbook exercicio1.yaml 
+vim exercicio1.yaml 
+ansible-playbook exercicio1.yaml 
+vim exercicio1.yaml 
+ansible -m setup all | less
+cp exercicio1.yaml exercicio2.yaml 
+vim exercicio2.yaml 
+ansible-playbook exercicio2.yaml 
+ss -ntpl
+vim exercicio2.yaml 
+vim wp-config
+vim exercicio2.yaml 
+ansible-playbook exercicio2.yaml 
+vim exercicio2.yaml 
+ansible-playbook exercicio2.yaml 
+ansible-vault encrypt exercicio2.yaml 
+vim exercicio2.yaml 
+ansible-playbook exercicio2.yaml --ask-vault-password
+man ansible-playbook 
+ansible-playbook exercicio2.yaml --ask-vault-pass
+ansible-vault decrypt exercicio2.yaml 
+ls -l
+vim exercicio2.yaml 
+vim exercicio3_when.yaml 
+vim ~/.viminfo 
+vim exercicio3_when.yaml 
+ansible-vault decrypt exercicio3_when.yaml 
+ansible-playbook exercicio3_when.yaml 
+vim exercicio3_when.yaml 
+ansible-playbook exercicio3_when.yaml 
+vim exercicio3_when.yaml 
+ansible-playbook exercicio3_when.yaml 
+vim exercicio3_when.yaml 
+ansible-playbook exercicio3_when.yaml 
+vim teste
+vim exercicio3_when.yaml 
+ansible-playbook exercicio3_when.yaml 
+vim exercicio3_when.yaml 
+ansible-playbook exercicio3_when.yaml 
+ls -l /tmp/test.*
+ls -l /tmp/
+vim exercicio3_when.yaml 
+ansible-playbook exercicio3_when.yaml 
+vim exercicio3_when.yaml 
+ssh docker.dexter.com.br ls -l /etc/test.result
+ssh docker.dexter.com.br cat /etc/test.result
+cat /etc/test.result
+vim exercicio3_when.yaml 
+cat /etc/test.result
+ansible-playbook exercicio3_when.yaml 
+vim exercicio3_when.yaml 
+vim exercicio3_when.yaml +26
+ansible-playbook exercicio3_when.yaml 
+vim exercicio3_when.yaml +26
+ansible-playbook exercicio3_when.yaml 
+vim exercicio3_when.yaml +26
+ansible-playbook exercicio3_when.yaml 
+vim exercicio3_when.yaml +26
+ansible-playbook exercicio3_when.yaml 
+vim exercicio3_when.yaml +26
+ansible-playbook exercicio3_when.yaml 
+vim exercicio3_when.yaml +26
+ansible-playbook exercicio3_when.yaml 
+vim exercicio3_when.yaml +26
+ansible-playbook exercicio3_when.yaml 
+vim exercicio4_handlers.yaml
+ansible-playbook exercicio4_handlers.yaml
+vim exercicio4_handlers.yaml
+ansible-playbook exercicio4_handlers.yaml
+vim exercicio4_handlers.yaml
+ansible-playbook exercicio4_handlers.yaml
+vim exercicio4_handlers.yaml
+vim index.html
+vim exercicio4_handlers.yaml
+vim index.html
+ansible -m setup all | less
+vim index.html
+ansible-playbook exercicio4_handlers.yaml
+vim index.html
+vim exercicio4_handlers.yaml
+vim index.html
+ansible-playbook exercicio4_handlers.yaml
+vim index.html
+ansible-playbook exercicio4_handlers.yaml
+vim index.html
+vim exercicio4_handlers.yaml
+vim /var/www/html/index.html 
+vim index.html
+ansible-playbook exercicio4_handlers.yaml
+vim index.html
+vim /var/www/html/index.html 
+ansible-playbook exercicio4_handlers.yaml
+vim exercicio4_handlers.yaml
+ssh automation
+vim exercicio4_handlers.yaml
+ansible-playbook exercicio4_handlers.yaml
+ssh automation
+ansible-playbook exercicio4_handlers.yaml
+vim exercicio4_handlers.yaml
+ssh automation
+vim exercicio4_handlers.yaml
+ssh automation
+ansible-playbook exercicio4_handlers.yaml
+ssh automation
+ansible-playbook exercicio4_handlers.yaml
+vim exercicio4_handlers.yaml
+vim /var/www/html/index.html 
+ansible-playbook exercicio4_handlers.yaml
+vim exercicio4_handlers.yaml
+vim /var/www/html/index.html 
+vim index.html 
+ansible-playbook exercicio4_handlers.yaml
+vim exercicio4_handlers.yaml
+ls -l
+cd ../roles/
+ansible-galaxy init conf
+cd conf/
+ll
+ll tests/
+vim tests/test.yml 
+cd files/
+ll
+vim hosts
+cp ~/.bashrc bash_rc
+vim bash_rc 
+man figlet
+vim bash_rc 
+ll
+cd ../tasks/
+#ansible-galaxy init conf
+touch user.yaml package.yaml files.yaml main.yaml
+ll
+rm main.yaml 
+vim main.yml 
+vim user.yaml 
+cat ../../../playbooks/exercicio1.yaml 
+:q
+cat ../../../playbooks/exercicio3_when.yaml 
+cat ../../../playbooks/exercicio2.yaml 
+cat ../../../playbooks/exercicio1.yaml 
+vim user.yaml 
+vim package.yaml 
+cat ../../../playbooks/exercicio1.yaml 
+vim package.yaml 
+vim files.yaml 
+vim ../../../playbooks/conf.yaml
+cp -a /etc/hosts ../files/hosts 
+vim ../files/hosts 
+vim ../../../playbooks/conf.yaml
+cd /etc/ansible/playbooks/
+ansible-playbook conf.yaml 
+vim conf.yaml 
+vim /etc/ansible/roles/conf/tasks/user.yaml
+ansible-playbook conf.yaml 
+ssh docker
+vim ../roles/conf/tasks/package.yaml 
+ls -l
+ls -la
+find . -name "*.retry" -delete 
+ls -la 
+ls -la ../roles/conf/tasks/
+rm ../roles/conf/tasks/.package.yaml.sw*
+ls -la ../roles/conf/tasks/
+vim ../roles/conf/tasks/package.yaml 
+ansible-playbook conf.yaml 
+ls -l
+cd ../roles/
+#ansible-galaxy init apache
+cd -
+less exercicio4_handlers.yaml 
+cd ../roles/
+ansible-galaxy init web
+cd web/
+cp -a ../../playbooks/index.html templates/
+cp -a ../../playbooks/exercicio4_handlers.yaml tasks/
+vim tasks/exercicio4_handlers.yaml 
+cp ../../playbooks/conf.yaml ../../playbooks/web.yaml
+vim ../../playbooks/web.yaml
+vim tasks/exercicio4_handlers.yaml 
+vim handlers/main.yml 
+vim tasks/exercicio4_handlers.yaml 
+mv tasks/exercicio4_handlers.yaml tasks/package.yaml
+cp ../conf/tasks/main.yml tasks/main.yml 
+vim tasks/main.yml 
+cd tasks/
+ls -l
+vim package.yaml 
+mv package.yaml package_Debian.yaml 
+cp package_Debian.yaml package_RedHat.yaml 
+ls -l
+vim package_Debian.yaml 
+cp package_RedHat.yaml package.yaml
+vim package.yaml 
+ls -l
+cp package_RedHat.yaml apache_config.yaml
+ls -l
+vim apache_config.yaml 
+ls -l
+vim package_Debian.yaml
+vim main.yml 
+ls -l
+vim package_RedHat.yaml 
+cat *
+cd ../../pl
+cd ../../../playbooks/
+ansible-playbook web.yaml 
+apt-cache search mariadb
+vim ../roles/web/tasks/package_Debian.yaml 
+vim ../roles/web/tasks/package.yaml 
+vim ../roles/web/tasks/package_RedHat.yaml 
+vim ../roles/web/tasks/package_Debian.yaml 
+ansible-playbook web.yaml 
+vim ../roles/web/tasks/package_Debian.yaml 
+vim ../roles/web/tasks/package_RedHat.yaml 
+ansible-playbook web.yaml 
+vim ../roles/web/tasks/package.yaml 
+ansible-playbook web.yaml 
+ls -l ../roles/web/
+ls -lR ../roles/web/
+ansible-test sanity --list-tests
+vim web.yaml 
+ansible-playbook web.yaml 
+vim web.yaml 
+ansible-playbook web.yaml 
+vim web.yaml 
+ansible-playbook web.yaml 
+vim web.yaml 
+ansible-playbook web.yaml 
+vim web.yaml 
+ansible-playbook web.yaml 
+vim web.yaml 
+ansible-playbook web.yaml 
+vim web.yaml 
+ansible-playbook web.yaml 
+vim web.yaml 
+ansible --version
+vim web.yaml 
+ansible-playbook web.yaml 
+vim ../roles/web/tasks/main.yml 
+cd ../roles/
+ansible-galaxy init puppet
+ssh docker
+ssh automation
+ls -l
+cd puppet/
+ls -l
+vim tasks/main.yml 
+cd tasks/
+touch server.yaml client.yaml
+cp ../../web/tasks/main.yml .
+vim main.yml 
+vim server.yaml 
+mv server.yaml repositorio.yaml
+ls -l
+vim main.yml 
+vim repositorio.yaml 
+vim client.yaml 
+vim server.yaml
+vim ../../../hosts
+ls -l
+vim main.yml 
+vim repositorio.yaml 
+vim server.yaml 
+vim client.yaml 
+cp ../../../playbooks/web.yaml ../../../playbooks/puppet.yaml
+vim ../../../playbooks/puppet.yaml
+cd /etc/ansible/playbooks/
+ansible-playbook puppet.yaml 
+vim ../roles/puppet/tasks/server.yaml 
+vim ../roles/puppet/tasks/client.yaml 
+ansible-playbook puppet.yaml 
+cd -
+l -l
+ls -l
+vim server.yaml 
+vim client.yaml 
+cd -
+vim repositorio.yaml 
+cd -
+ansible-playbook puppet.yaml 
+ssh devops.dexter.com.br
+cd -
+vim server.yaml 
+ansible-playbook puppet.yaml 
+cd -
+ansible-playbook puppet.yaml 
+puppet
+ansible-playbook puppet.yaml 
+cd -
+vim repositorio.yaml 
+whereis puppet
+/opt/puppetlabs/bin/puppet
+ansible-playbook puppet.yaml 
+cd -
+ansible-playbook puppet.yaml 
+ls -l
+find .. -name "*.retry" -delete 
+ls -l
+cd ../roles/puppet/
+ls -l
+less tasks/main.yml 
+less tasks/repositorio.yaml 
+cd -
+cd ../roles/puppet/tasks/
+vim main.yml 
+ssh docker
+ps ax | grep pupp
+systemctl status puppet
+systemctl status puppetserver
+systemctl start puppetserver
+journalctl -xe
+systemctl shutdown
+systemctl poweroff
+systemctl start puppetserver
+systemctl start puppetservergs:/start/status/
+systemctl status puppetserver
+puppet
+puppet resource user
+puppet resource user | grep bruno
+puppet resource user brunocorrea
+puppet resource user linus
+puppet resource user linus ensure=present
+puppet resource user linus
+puppet resource user linus password="$1$E02nkV1k$JSmxLg/h90QEPC.78oSAz0"
+puppet resource user linus password='$1$E02nkV1k$JSmxLg/h90QEPC.78oSAz0'
