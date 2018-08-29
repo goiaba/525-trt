@@ -1,0 +1,30 @@
+- name: Instalando o gitlab
+  hosts: devops.dexter.com.br
+  environment:
+    EXTERNAL_URL: http://{{ inventory_hostname }}
+  tasks:
+    - name: Baixando o repositório do gitlab
+      get_url:
+        url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh
+        dest: /tmp/script.deb.sh
+        mode: 0440
+    
+    - name: Adicionando o repositório do gitlab
+      script: /tmp/script.deb.sh
+
+    - name: Apagando o arquivo de instalacao do repositorio do gitlab
+      file:
+        path: /tmp/script.deb.sh
+        state: absent
+
+    - name: Instalando pacotes de dependencia no Debian
+      package:
+        name:
+          - curl
+          - openssh-server
+          - ca-certificates
+          - postfix
+          - gitlab-ce
+        state: present
+        update_cache: yes
+
