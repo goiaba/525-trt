@@ -1,0 +1,35 @@
+- name: Instalando o ansible e o rundeck
+  hosts: automation.dexter.com.br
+  tasks:
+    - name: Instalando repositorio rundeck (RedHat)
+      yum:
+        name: https://repo.rundeck.org/latest.rpm
+        state: present
+
+    - name: Instalando pacotes 
+      package:
+        name:
+          - ansible-2.6.3
+          - java-1.8.0
+          - rundeck 
+        update_cache: yes
+        state: present
+
+    - name: Copiando configuracoes do ansible
+      copy:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+      with_items:
+        - src: /etc/keys/
+          dest: /etc/
+        - src: /etc/ansible/ansible.cfg
+          dest: /etc/ansible/
+        - src: /etc/ansible/hosts
+          dest: /etc/ansible/
+
+    - name: Iniciando rundeck
+      service:
+        name: rundeckd
+        state: started
+        enabled: yes
+
