@@ -9,11 +9,11 @@
     - name: Instalando pacotes 
       package:
         name:
-          - ansible-2.6.3
+          - ansible
           - java-1.8.0
           - rundeck 
         update_cache: yes
-        state: present
+        state: latest
 
     - name: Copiando configuracoes do ansible
       copy:
